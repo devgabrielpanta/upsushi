@@ -28,70 +28,72 @@
   </head>
   <body class="flex flex-col w-full min-h-screen">
     
-    <header class="navbar bg-black border-b border-white/10 px-4 md:px-10 sticky top-0 z-50">
-      <div class="navbar-start">
-        <img class="w-44 h-auto" src="assets/logotipo.png" alt="UPSUSHI Logo"/>
+    <header class="navbar bg-black border-b border-white/10 px-4 md:px-10 sticky top-0 z-50 flex justify-between">
+      <div class="navbar-start w-auto">
+        <img class="w-32 md:w-44 h-auto" src="assets/logotipo.png" alt="UPSUSHI Logo"/>
       </div>
-      <div class="navbar-end">
-        <button id="btn-open-bookings-modal" class="btn bg-gold border-none rounded-none uppercase text-xs tracking-widest font-bold px-8">
-          Reservar mesa
+      <div class="navbar-end w-auto">
+        <button id="btn-open-bookings-modal" class="btn bg-gold border-none rounded-none uppercase text-[10px] md:text-xs tracking-widest font-bold px-4 md:px-8">
+          Reservar
         </button>
       </div>
     </header>
 
-    <main class="relative grid grid-cols-[80px_1fr] md:grid-cols-[200px_1fr] flex-grow">
-      <nav class="bg-[#161616] border-r border-white/5 py-6">
-        <ul id="navbar" class="flex flex-col gap-2 px-2">
-          <li id="nav-home" class="p-3 rounded-md hover:bg-white/5 cursor-pointer transition-all">
+    <main class="flex flex-col md:grid md:grid-cols-[200px_1fr] flex-grow">
+      
+      <nav class="bg-[#161616] border-b md:border-b-0 md:border-r border-white/5 py-4 md:py-6 sticky top-[64px] md:top-[73px] z-40">
+        <ul id="navbar" class="flex flex-row md:flex-col gap-2 px-2 overflow-x-auto md:overflow-x-visible no-scrollbar">
+          <li id="nav-home" class="p-3 rounded-md hover:bg-white/5 cursor-pointer transition-all whitespace-nowrap">
             <span class="uppercase text-[10px] tracking-widest font-bold">Home</span>
           </li>
-          <li id="nav-sobre-nós" class="p-3 rounded-md hover:bg-white/5 cursor-pointer transition-all">
+          <li id="nav-sobre-nós" class="p-3 rounded-md hover:bg-white/5 cursor-pointer transition-all whitespace-nowrap">
             <span class="uppercase text-[10px] tracking-widest font-bold">Sobre nós</span>
           </li>
-          <li class="mt-6">
-            <span class="text-[9px] gold-text font-black uppercase tracking-[3px] px-3 hidden md:block">Ementa</span>
-            <div class="h-[1px] bg-white/10 my-2 mx-3 hidden md:block"></div>
-            <ul id="ementa" class="flex flex-col gap-1"></ul>
+          <li class="hidden md:block mt-6">
+            <span class="text-[9px] gold-text font-black uppercase tracking-[3px] px-3">Ementa</span>
+            <div class="h-[1px] bg-white/10 my-2 mx-3"></div>
           </li>
+          <div id="ementa" class="flex flex-row md:flex-col gap-2 md:gap-1"></div>
         </ul>
       </nav>
 
       <section class="p-4 md:p-10 bg-[#0a0a0a]">
-        <div id="main-content" class="bg-[#121212] rounded-xl p-6 md:p-12 border border-white/5 min-h-full"></div>
+        <div id="main-content" class="bg-[#121212] rounded-xl p-4 md:p-12 border border-white/5 min-h-full"></div>
       </section>
     </main>
 
     <footer class="w-full bg-black border-t border-white/10">
-      <p class="text-center p-6 text-xs opacity-40 uppercase tracking-widest">© 2026 UPSUSHI. All rights reserved.</p>
+      <p class="text-center p-6 text-[10px] opacity-40 uppercase tracking-widest">© 2026 UPSUSHI. All rights reserved.</p>
     </footer>
 
-    <dialog id="product-modal" class="modal"></dialog>
+    <dialog id="product-modal" class="modal modal-bottom sm:modal-middle"></dialog>
+    
     <dialog id="bookings-modal" class="modal">
-      <div class="modal-box bg-[#1a1a1a] border border-white/10 max-w-2xl rounded-none">
-        <h3 class="modal-title text-3xl gold-text italic mb-6">Reservas</h3>
-        <form id="form-reserva" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+      <div class="modal-box bg-[#1a1a1a] border border-white/10 max-w-2xl rounded-none p-6 md:p-10">
+        <h3 class="modal-title text-2xl md:text-3xl gold-text italic mb-6">Reservas</h3>
+        <form id="form-reserva" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 text-left">
           <div class="form-control">
             <label class="label"><span class="label-text text-white/50 text-[10px] uppercase">Data e Hora</span></label>
-            <input name="agenda" type="datetime-local" class="input input-bordered bg-black/40 border-white/10 rounded-none" required />
+            <input name="agenda" type="datetime-local" class="input input-bordered bg-black/40 border-white/10 rounded-none w-full" required />
           </div>
           <div class="form-control">
             <label class="label"><span class="label-text text-white/50 text-[10px] uppercase">Pessoas</span></label>
-            <input name="guests" type="number" class="input input-bordered bg-black/40 border-white/10 rounded-none" value="2" required />
+            <input name="guests" type="number" class="input input-bordered bg-black/40 border-white/10 rounded-none w-full" value="2" required />
           </div>
           <div class="form-control">
             <label class="label"><span class="label-text text-white/50 text-[10px] uppercase">Nome</span></label>
-            <input name="name" type="text" class="input input-bordered bg-black/40 border-white/10 rounded-none" required />
+            <input name="name" type="text" class="input input-bordered bg-black/40 border-white/10 rounded-none w-full" required />
           </div>
           <div class="form-control">
             <label class="label"><span class="label-text text-white/50 text-[10px] uppercase">Email</span></label>
-            <input name="email" type="email" class="input input-bordered bg-black/40 border-white/10 rounded-none" required />
+            <input name="email" type="email" class="input input-bordered bg-black/40 border-white/10 rounded-none w-full" required />
           </div>
           <div class="md:col-span-2 mt-4">
-            <label class="label text-[10px] text-white/30 flex justify-start items-center gap-3 cursor-pointer mb-6">
-              <input name="consent" type="checkbox" class="checkbox checkbox-xs border-white/20" required />
-              Concordo com a coleta e o uso do meu nome e email conforme a GDPR.
+            <label class="label text-[10px] text-white/30 flex justify-start items-start gap-3 cursor-pointer mb-6">
+              <input name="consent" type="checkbox" class="checkbox checkbox-xs border-white/20 mt-1" required />
+              <span>Concordo com a coleta e o uso do meu nome e email conforme a GDPR.</span>
             </label>
-            <button type="submit" class="btn bg-gold border-none w-full rounded-none font-bold uppercase tracking-widest h-14">Enviar Solicitação de Reserva</button>
+            <button type="submit" class="btn bg-gold border-none w-full rounded-none font-bold uppercase tracking-widest h-14">Enviar Solicitação</button>
             <button type="button" class="btn btn-ghost btn-block mt-2 text-[10px] uppercase close-bookings-modal">Cancelar</button>
           </div>
         </form>
