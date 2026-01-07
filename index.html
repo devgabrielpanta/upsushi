@@ -29,7 +29,9 @@
     <header class="navbar shadow-sm">
       <div class="navbar-start">UPSUSHI</div>
       <div class="navbar-end">
-        <a class="btn btn-primary">Reservar mesa</a>
+        <button id="btn-open-bookings-modal" class="btn btn-primary">
+          Reservar mesa
+        </button>
       </div>
     </header>
     <main
@@ -80,7 +82,77 @@
     </footer>
 
     <dialog id="product-modal" class="modal"></dialog>
-    <dialog id="bookings-modal" class="modal"></dialog>
+    <dialog id="bookings-modal" class="modal">
+      <div class="close-bookings-modal hero-overlay"></div>
+      <div class="modal-box bg-base-300 flex flex-col items-center max-w-3xl">
+        <div class="flex flex-row justify-between items-center w-full">
+          <h3 class="font-bold text-lg text-left">Reservas</h3>
+          <button class="close-bookings-modal btn btn-soft">cancelar</button>
+        </div>
+        <form class="flex flex-col items-center mt-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <fieldset
+              class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4"
+            >
+              <legend class="fieldset-legend">Agenda</legend>
+
+              <label class="label">Data e Hora</label>
+              <input
+                name="agenda"
+                type="datetime-local"
+                class="input"
+                value=""
+                required
+              />
+
+              <label class="label">Quantidade de Pessoas</label>
+              <input
+                name="guests"
+                type="number"
+                class="input"
+                value="2"
+                required
+              />
+            </fieldset>
+
+            <fieldset
+              class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4"
+            >
+              <legend class="fieldset-legend">Dados Pessoais</legend>
+
+              <label class="label">Nome</label>
+              <input
+                name="name"
+                type="text"
+                class="input"
+                value=""
+                placeholder="Digite o seu nome completo"
+                required
+              />
+
+              <label class="label">Email</label>
+              <input
+                name="email"
+                type="email"
+                class="input"
+                value=""
+                placeholder="Digite o seu email"
+                required
+              />
+            </fieldset>
+          </div>
+          <label
+            class="label text-xs text-wrap w-full py-6 flex justify-center items-center gap-2"
+          >
+            <input name="consent" type="checkbox" class="checkbox" required />
+            Concordo com a coleta e o uso do meu nome e email conforme a GDPR.
+          </label>
+          <button type="submit" class="btn btn-primary">
+            Enviar Solicitação de Reserva
+          </button>
+        </form>
+      </div>
+    </dialog>
     <script type="module" src="scripts/main.js"></script>
   </body>
 </html>

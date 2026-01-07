@@ -1,5 +1,4 @@
 import productList from "../products.json" with { type: "json" };
-
 // ###################################################################
 //                     LOADING ELEMENTS
 // ###################################################################
@@ -7,6 +6,7 @@ import productList from "../products.json" with { type: "json" };
 const mainContent = document.getElementById("main-content");
 const ementa = document.getElementById("ementa");
 const navbar = document.getElementById("navbar");
+const bookingModal = document.getElementById("bookings-modal");
 
 const menuOptions = [
     {title: "entradas", icon: "🏠"},
@@ -217,14 +217,19 @@ function displayProductModal(product) {
                 </div>
             </div>
             <div class="flex flex-row justify-between items-center mt-4">
-                <button class="btn btn-ghost" onclick="closeProductModal()">Fechar</button>
-                <a href="reservas.html" class="btn btn-primary">Reservar Mesa</a>
+                <button class="btn btn-ghost">Fechar</button>
+                <a class="btn-open-bookings-modal btn btn-primary">Reservar Mesa</a>
             </div>
         </div>
     `;
     // Adiciona um listener ao botão de fechar
     const button = productModal.querySelector("button");
     button.addEventListener("click", closeProductModal);
+
+    const openBookingModal = productModal.querySelector("a");
+    openBookingModal.addEventListener("click", () => {
+        bookingModal.showModal();
+    });
 
     // Exibe o modal
     productModal.showModal();
@@ -238,3 +243,77 @@ function closeProductModal() {
 // ###################################################################
 //                       BOOKINGS MODAL
 // ###################################################################
+
+// Adiciona listeners ao botão do header para abrir o modal
+const openBookingHeader = document.getElementById("btn-open-bookings-modal");
+openBookingHeader.addEventListener("click", () => {
+    bookingModal.showModal();
+});
+
+// Adiciona um listener ao botão de fechar
+const closeBookingButtons = bookingModal.querySelectorAll(".close-bookings-modal");
+closeBookingButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        bookingModal.close();
+    });
+});
+
+// Adiciona listener ao formulário de reservas
+const bookingsForm = bookingModal.querySelector("form");
+bookingsForm.addEventListener("submit", (e) => handleBookingSubmission(e));
+
+// Manipula o envio do formulário de reservas
+function handleBookingSubmission(event) {
+    event.preventDefault();
+    const formData = new FormData(bookingsForm);
+    const agenda = formData.get("agenda");
+    const guests = formData.get("guests");
+    const name = formData.get("name");
+    const email = formData.get("email");
+
+    const date = formatDateDisplay(agenda);
+    const time = formatTimeDisplay(agenda);
+
+    displaySuccessMessage(`Solicitação de reserva efetuada com sucesso para ${name} no dia ${date} às ${time} para ${guests} pessoas. Responderemos o mais breve possível para o email ${email}.`);
+    bookingModal.close();
+    bookingsForm.reset();
+}
+
+// ###################################################################
+//                       HELPER FUNCTIONS
+// ###################################################################
+
+// Exibe uma barra com mensagem de sucesso
+function displaySuccessMessage(message) {
+    const alert = document.createElement("div");
+    alert.role = "alert";
+    alert.className = "alert alert-success fixed bottom-0 left-0 w-full rounded-none p-4";
+    alert.innerHTML = /*html*/ `
+        <div class="flex flex-row justify-start items-start gap-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            <span>${message}</span>
+        </div>    
+    `;
+
+    setTimeout(() => {
+        alert.remove();
+    }, 10000);
+
+    document.body.appendChild(alert);
+}
+
+// Formata a data para exibição amigável
+function formatDateDisplay(dateString) {
+    const date = new Date(dateString);
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return date.toLocaleDateString(undefined, options);
+}
+
+// Formata a hora para exibição amigável
+function formatTimeDisplay(dateString) {
+    const date = new Date(dateString);
+    const options = { hour: '2-digit', minute: '2-digit' };
+    return date.toLocaleTimeString(undefined, options);
+}
