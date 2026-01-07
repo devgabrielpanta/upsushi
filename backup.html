@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt" data-theme="winter">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UPSUSHI - Ementa</title>
+    <link
+      rel="icon"
+      href="assets/favicon.svg"
+      sizes="any"
+      type="image/svg+xml"
+    />
+
+    <!--Tailwind CSS + DaisyUI-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="navbar bg-base-300 shadow-sm">
+      <!-- Lado esquerdo -->
+      <div class="navbar-start">
+        <!-- Botão dropdown que aparece só no mobile -->
+        <nav class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+          <ul
+            tabindex="-1"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+            <!-- Página atual sem href para não recarregar -->
+            <li><a href="index.html">Home</a></li>
+            <li><a>Ementa</a></li>
+          </ul>
+        </nav>
+
+        <!-- Logotipo -->
+        <a class="btn btn-ghost text-xl">UPSUSHI</a>
+      </div>
+
+      <!-- Navegação central (desktop only) -->
+      <nav class="navbar-center hidden lg:flex">
+        <ul class="menu menu-horizontal px-1 gap-4">
+          <!-- Página atual sem href para não recarregar -->
+          <li><a href="index.html">Home</a></li>
+          <li><a>Ementa</a></li>
+        </ul>
+      </nav>
+
+      <!-- Lado direito -->
+      <div class="navbar-end">
+        <a href="reservas.html" class="btn">Reservar mesa</a>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="drawer lg:drawer-open">
+      <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
+      <div
+        class="drawer-content flex flex-col items-center justify-center bg-base-200 p-6"
+      >
+        <!-- Filter  -->
+        <nav class="flex flex-row w-full justify-end items-center gap-4 mb-4">
+          <!-- Filtros (mobile only) -->
+          <label for="my-drawer-3" class="btn drawer-button lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="w-5 h-5"
+            >
+              <!-- Linhas -->
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="4" y1="12" x2="14" y2="12" />
+              <line x1="4" y1="18" x2="20" y2="18" />
+
+              <!-- Indicadores -->
+              <circle cx="16" cy="12" r="1.5" />
+              <circle cx="8" cy="6" r="1.5" />
+              <circle cx="10" cy="18" r="1.5" />
+            </svg>
+          </label>
+        </nav>
+
+        <!-- Grid de Categoria/Produtos -->
+        <ul
+          id="category-grid"
+          class="flex flex-col w-full h-full p-10 gap-5 bg-base-100 rounded-box"
+        ></ul>
+      </div>
+
+      <!-- Sidebar -->
+      <nav class="drawer-side">
+        <!-- Overlay Mobile -->
+        <label
+          for="my-drawer-3"
+          aria-label="close sidebar"
+          class="drawer-overlay"
+        ></label>
+
+        <!-- Sidebar content here -->
+        <ul
+          id="filters"
+          class="flex flex-col gap-4 bg-base-200 min-h-full w-50 px-4 pt-10"
+        ></ul>
+      </nav>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="bg-base-300">
+      <p class="text-center p-4">© 2026 UPsushi. All rights reserved.</p>
+    </footer>
+    <dialog id="product-modal" class="modal"></dialog>
+    <script type="module" src="scripts/main.js"></script>
+  </body>
+</html>

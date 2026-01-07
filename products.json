@@ -1,0 +1,340 @@
+{
+  "entradas": [
+    {
+      "id": "gyoza-legumes",
+      "title": "Gyozas De Legumes 5 pcs",
+      "description": "Raviolis japoneses recheados com legumes, 5 unidades, finalizados com cebolinho.",
+      "price": 7.99,
+      "image": "assets/images/produtos/entradas/gyoza-legumes.webp"
+    },
+    {
+      "id": "gyoza-frango",
+      "title": "Gyozas de Frango (5pcs)",
+      "description": "Raviolis japoneses crocantes recheados com frango picado e vegetais.",
+      "price": 7.99,
+      "image": "assets/images/produtos/entradas/gyoza-frango.webp"
+    },
+    {
+      "id": "gyoza-camarao",
+      "title": "Gyozas de Camarão (5 peças)",
+      "description": "Raviolis japoneses delicados com recheio de camarão, servidos com molho especial.",
+      "price": 7.99,
+      "image": "assets/images/produtos/entradas/gyoza-camarao.webp"
+    },
+    {
+      "id": "edamame",
+      "title": "Edamame",
+      "description": "Feijão de soja cozido na vagem, temperado com flor de sal.",
+      "price": 5.99,
+      "image": "assets/images/produtos/entradas/edamame.webp"
+    },
+    {
+      "id": "sopa-miso-tofu",
+      "title": "Sopa miso Tofu",
+      "description": "Sopa tradicional japonesa à base de pasta de soja, servida com cubos de tofu e cebolinho.",
+      "price": 7.99,
+      "image": "assets/images/produtos/entradas/sopa-miso-tofu.webp"
+    },
+    {
+      "id": "sopa-miso-salmon",
+      "title": "Sopa miso Salmon",
+      "description": "Variação da sopa miso tradicional, enriquecida com pedaços de salmão fresco.",
+      "price": 8.99,
+      "image": "assets/images/produtos/entradas/sopa-miso-salmon.webp"
+    }
+  ],
+  "menus": [
+    {
+      "id": "menu-moka-21pcs",
+      "title": "MOKA 21PCS",
+      "description": "Combinado de 21 peças: 8 Hossomaki Salmon, 8 Uramaki Abacate, 3 Nigiri Salmon, 2 Gunkan Philadelphia.",
+      "price": 29.99,
+      "image": "assets/images/produtos/menus/menu-moka-21pcs.webp"
+    },
+    {
+      "id": "menu-bando-31pcs",
+      "title": "BANDO 31PCS",
+      "description": "Combinado de 31 peças: 4 Hosomaki Salmon, 4 Hosomaki Atum, 4 Uramaki Mixed Sesame, 3 Nigiri Salmon, 2 Nigiri Atum, 2 Sashimi Salmon, 2 Sashimi Atum, 3 Gunkan Salmon, 4 Uramaki Salmon Topping, 4 Masago Topping.",
+      "price": 37.99,
+      "image": "assets/images/produtos/menus/menu-bando-31pcs.webp"
+    },
+    {
+      "id": "menu-sosa-36pcs",
+      "title": "SOSA 36PCS",
+      "description": "Combinado de 36 peças: 4 Hosomaki Salmon, 4 Hosomaki Atum, 4 Uramaki Mixed Sesame, 2 Nigiri Salmon, 2 Nigiri Salmon Braseado, 2 Nigiri Atum, 3 Sashimi Salmon, 3 Sashimi Atum, 4 Gunkan Salmon, 4 Uramaki Salmon Topping, 4 Masago Topping.",
+      "price": 42.99,
+      "image": "assets/images/produtos/menus/menu-sosa-36pcs.webp"
+    },
+    {
+      "id": "menu-inzai-38pcs",
+      "title": "INZAI 38PCS",
+      "description": "Combinado de 38 peças: 4 Hosomaki Salmon, 4 Hosomaki Atum, 4 Uramaki Mixed Sesame, 2 Nigiri Salmon, 2 Nigiri Salmon Braseado, 2 Nigiri Atum, 3 Sashimi Salmon, 3 Sashimi Atum, 4 Gunkan Salmon, 4 Uramaki Salmon Topping, 4 Masago Topping, 2 Nigiri Camarão.",
+      "price": 45.99,
+      "image": "assets/images/produtos/menus/menu-inzai-38pcs.webp"
+    },
+    {
+      "id": "menu-daigo-45pcs",
+      "title": "DAIGO 45PCS",
+      "description": "Combinado de 45 peças: 4 Hosomaki Salmon, 4 Hosomaki Atum, 4 Uramaki Mixed Sesame, 2 Nigiri Salmon, 4 Nigiri Salmon Braseado, 2 Nigiri Atum, 4 Sashimi Salmon, 4 Sashimi Atum, 4 Gunkan Salmon, 4 Uramaki Salmon Topping, 4 Masago Topping, 2 Nigiri Camarão, 3 Hot Roll Salmon.",
+      "price": 55.99,
+      "image": "assets/images/produtos/menus/menu-daigo-45pcs.webp"
+    },
+    {
+      "id": "menu-choshi-71pcs",
+      "title": "CHOSHI 71PCS",
+      "description": "Combinado familiar de 71 peças: Hosomaki Salmon e Atum, Uramaki Mixed Sesame, Nigiri Salmon e Atum (Simples e Braseado), Sashimi variado, Gunkan Salmon, Uramaki Toppings, Masago, Nigiri Camarão, Hot Roll Salmon, Hot Spring Roll e Gyozas de Legumes.",
+      "price": 89.99,
+      "image": "assets/images/produtos/menus/menu-choshi-71pcs.webp"
+    }
+  ],
+  "hot-rolls": [
+    {
+      "id": "hot-roll-salmon",
+      "title": "Hot Roll Salmon (8pcs)",
+      "description": "Rolo quente com salmão, queijo philadelphia, panko e farinha.",
+      "price": 13.9,
+      "image": "assets/images/produtos/hot-rolls/hot-roll-salmon.webp"
+    },
+    {
+      "id": "hot-haru-roll",
+      "title": "Hot Haru Roll (8pcs)",
+      "description": "Rolo primavera quente com philadelphia e salmão.",
+      "price": 11.9,
+      "image": "assets/images/produtos/hot-rolls/hot-haru-roll.webp"
+    },
+    {
+      "id": "hot-california",
+      "title": "Hot California 16pçs",
+      "description": "Combinado quente: 8 hossomaki e 8 futomaki hot com philadelphia.",
+      "price": 23.5,
+      "image": "assets/images/produtos/hot-rolls/hot-california.webp"
+    },
+    {
+      "id": "menu-hot-mix",
+      "title": "Menu Hot Mix (20 peças)",
+      "description": "Hot roll Salmon, Hot primavera salmon, 2 gyozas frango, 2 spring roll vegetais.",
+      "price": 26.9,
+      "image": "assets/images/produtos/hot-rolls/menu-hot-mix.webp"
+    }
+  ],
+  "uramakis": [
+    {
+      "id": "uramaki-philadelphia",
+      "title": "Uramaki Philadelphia (8 Peças)",
+      "description": "Rolo invertido com philadelphia, salmão e mistura de sementes de sésamo.",
+      "price": 12.99,
+      "image": "assets/images/produtos/uramakis/uramaki-philadelphia.webp"
+    },
+    {
+      "id": "spicy-atum",
+      "title": "Spicy Atum (8 Peças)",
+      "description": "Atum com molho sriracha, abacate e togarashi.",
+      "price": 12.99,
+      "image": "assets/images/produtos/uramakis/spicy-atum.webp"
+    },
+    {
+      "id": "spicy-salmao",
+      "title": "Spicy Salmão (8 Peças)",
+      "description": "Salmão com molho spicy sriracha, abacate e togarashi.",
+      "price": 13.99,
+      "image": "assets/images/produtos/uramakis/spicy-salmao.webp"
+    },
+    {
+      "id": "mix-dragon-roll",
+      "title": "Mix Dragon Roll (8 Peças)",
+      "description": "Salmão, abacate, philadelphia e topping de abacate.",
+      "price": 13.99,
+      "image": "assets/images/produtos/uramakis/mix-dragon-roll.webp"
+    },
+    {
+      "id": "california-atum",
+      "title": "California Atum (8 Peças)",
+      "description": "Atum, philadelphia e masago laranja.",
+      "price": 13.99,
+      "image": "assets/images/produtos/uramakis/california-atum.webp"
+    },
+    {
+      "id": "california-salmao",
+      "title": "California Salmão (8 peças)",
+      "description": "Salmão, abacate, philadelphia e masago.",
+      "price": 13.99,
+      "image": "assets/images/produtos/uramakis/california-salmao.webp"
+    },
+    {
+      "id": "abacate-roll",
+      "title": "Abacate Roll (8 Peças)",
+      "description": "Abacate, philadelphia e salmão.",
+      "price": 14.99,
+      "image": "assets/images/produtos/uramakis/abacate-roll.webp"
+    },
+    {
+      "id": "sweetmaki-salmao",
+      "title": "Sweetmaki Salmão (8 Peças)",
+      "description": "Salmão, manga, abacate e philadelphia.",
+      "price": 15.99,
+      "image": "assets/images/produtos/uramakis/sweetmaki-salmao.webp"
+    },
+    {
+      "id": "salmon-roll",
+      "title": "Salmon Roll (8 Peças)",
+      "description": "Salmão, abacate e philadelphia.",
+      "price": 14.99,
+      "image": "assets/images/produtos/uramakis/salmon-roll.webp"
+    }
+  ],
+  "hossomakis": [
+    {
+      "id": "hossomaki-salmao",
+      "title": "Hossomaki Salmão (8pcs)",
+      "description": "Rolo fino tradicional com arroz e salmão.",
+      "price": 8.99,
+      "image": "assets/images/produtos/hossomakis/hossomaki-salmao.webp"
+    },
+    {
+      "id": "hossomaki-atum",
+      "title": "Hossomaki Atum (8pcs)",
+      "description": "Rolo fino tradicional com arroz e atum.",
+      "price": 8.99,
+      "image": "assets/images/produtos/hossomakis/hossomaki-atum.webp"
+    },
+    {
+      "id": "hossomaki-pepino",
+      "title": "Hossomaki Pepino (8 pcs)",
+      "description": "Rolo fino tradicional com arroz e pepino.",
+      "price": 8.99,
+      "image": "assets/images/produtos/hossomakis/hossomaki-pepino.webp"
+    },
+    {
+      "id": "hossomaki-manga",
+      "title": "Hossomaki Manga (8 pcs)",
+      "description": "Rolo fino tradicional com arroz e manga.",
+      "price": 8.99,
+      "image": "assets/images/produtos/hossomakis/hossomaki-manga.webp"
+    },
+    {
+      "id": "hossomaki-abacate",
+      "title": "Hossomaki Abacate (8 pcs)",
+      "description": "Rolo fino tradicional com arroz e abacate.",
+      "price": 8.99,
+      "image": "assets/images/produtos/hossomakis/hossomaki-abacate.webp"
+    }
+  ],
+  "sashimis": [
+    {
+      "id": "sashimi-salmao",
+      "title": "Sashimi Salmão (5pcs)",
+      "description": "Fatias frescas de salmão.",
+      "price": 7.99,
+      "image": "assets/images/produtos/sashimis/sashimi-salmao.webp"
+    },
+    {
+      "id": "sashimi-atum",
+      "title": "Sashimi Atum (5pcs)",
+      "description": "Fatias frescas de atum.",
+      "price": 7.99,
+      "image": "assets/images/produtos/sashimis/sashimi-atum.webp"
+    },
+    {
+      "id": "sashimi-salmao-braseado",
+      "title": "Sashimi Salmão Braseado (5pcs)",
+      "description": "Fatias de salmão levemente braseadas.",
+      "price": 8.99,
+      "image": "assets/images/produtos/sashimis/sashimi-salmao-braseado.webp"
+    },
+    {
+      "id": "sashimi-peixe-branco",
+      "title": "Sashimi Peixe Branco (5pcs)",
+      "description": "Fatias frescas de peixe branco.",
+      "price": 7.49,
+      "image": "assets/images/produtos/sashimis/sashimi-peixe-branco.webp"
+    },
+    {
+      "id": "menu-sashimi-misto",
+      "title": "Menu Sashimi Misto (12 pecas)",
+      "description": "Seleção mista de fatias de peixe fresco.",
+      "price": 14.99,
+      "image": "assets/images/produtos/sashimis/menu-sashimi-misto.webp"
+    }
+  ],
+  "nigiris": [
+    {
+      "id": "nigiri-salmao",
+      "title": "Nigiri Salmão (3 pcs)",
+      "description": "Fatia de salmão sobre arroz de sushi.",
+      "price": 6.99,
+      "image": "assets/images/produtos/nigiris/nigiri-salmao.webp"
+    },
+    {
+      "id": "nigiri-salmao-braseado",
+      "title": "Nigiri Salmon Braseado (3pcs)",
+      "description": "Fatia de salmão braseado sobre arroz de sushi.",
+      "price": 6.99,
+      "image": "assets/images/produtos/nigiris/nigiri-salmao-braseado.webp"
+    },
+    {
+      "id": "nigiri-atum",
+      "title": "Nigiri Atum (3pcs)",
+      "description": "Fatia de atum sobre arroz de sushi.",
+      "price": 6.99,
+      "image": "assets/images/produtos/nigiris/nigiri-atum.webp"
+    },
+    {
+      "id": "nigiri-peixe-branco",
+      "title": "Nigiri Peixe Branco (3 pcs)",
+      "description": "Fatia de peixe branco sobre arroz de sushi.",
+      "price": 5.99,
+      "image": "assets/images/produtos/nigiris/nigiri-peixe-branco.webp"
+    }
+  ],
+  "bebidas": [
+    {
+      "id": "coca-cola",
+      "title": "Coca-Cola 330ml",
+      "description": "Refrigerante de cola, lata de 330ml.",
+      "price": 2.2,
+      "image": "assets/images/produtos/bebidas/coca-cola.webp"
+    },
+    {
+      "id": "coca-cola-zero",
+      "title": "Coca-Cola s/ Açúcar 330ml",
+      "description": "Refrigerante de cola sem açúcar, lata de 330ml.",
+      "price": 2.2,
+      "image": "assets/images/produtos/bebidas/coca-cola-zero.webp"
+    },
+    {
+      "id": "iced-tea-limao",
+      "title": "Iced Tea Limão 330ml",
+      "description": "Chá gelado com sabor a limão, 330ml.",
+      "price": 1.99,
+      "image": "assets/images/produtos/bebidas/iced-tea-limao.webp"
+    },
+    {
+      "id": "iced-tea-pessego",
+      "title": "Iced Tea Pêssego 330ml",
+      "description": "Chá gelado com sabor a pêssego, 330ml.",
+      "price": 1.99,
+      "image": "assets/images/produtos/bebidas/iced-tea-pessego.webp"
+    },
+    {
+      "id": "iced-tea-manga",
+      "title": "Iced Tea Manga 330ml",
+      "description": "Chá gelado com sabor a manga, 330ml.",
+      "price": 1.99,
+      "image": "assets/images/produtos/bebidas/iced-tea-manga.webp"
+    },
+    {
+      "id": "cerveja-sagres",
+      "title": "Sagres Cerveja 330ml",
+      "description": "Cerveja Sagres, 330ml.",
+      "price": 2.99,
+      "image": "assets/images/produtos/bebidas/cerveja-sagres.webp"
+    },
+    {
+      "id": "cerveja-super-bock",
+      "title": "Super Bock 33cl",
+      "description": "Cerveja Super Bock, 330ml.",
+      "price": 2.99,
+      "image": "assets/images/produtos/bebidas/cerveja-super-bock.webp"
+    }
+  ]
+}
