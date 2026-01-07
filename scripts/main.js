@@ -9,23 +9,23 @@ const navbar = document.getElementById("navbar");
 const bookingModal = document.getElementById("bookings-modal");
 
 const menuOptions = [
-    {title: "entradas", icon: "🏠"},
-    {title: "menus", icon: "🏠"},
-    {title: "hot-rolls", icon: "🏠"},
-    {title: "uramakis", icon: "🏠"},
-    {title: "hossomakis", icon: "🏠"},
-    {title: "sashimis", icon: "🏠"},
-    {title: "nigiris", icon: "🏠"},
-    {title: "bebidas", icon: "🏠"},
+    {title: "entradas", icon: "assets/images/navbar/entradas.png"},
+    {title: "menus", icon: "assets/images/navbar/menus.png"},
+    {title: "hot-rolls", icon: "assets/images/navbar/hot-rolls.png"},
+    {title: "uramakis", icon: "assets/images/navbar/uramakis.png"},
+    {title: "hossomakis", icon: "assets/images/navbar/hossomakis.png"},
+    {title: "sashimis", icon: "assets/images/navbar/sashimis.png"},
+    {title: "nigiris", icon: "assets/images/navbar/nigiris.png"},
+    {title: "bebidas", icon: "assets/images/navbar/bebidas.png"},
 ];
 
 // Adiciona a categoria de ementa ao navbar
 for (const option of menuOptions) {
     const li = document.createElement("li");
     li.id = `nav-${option.title}`;
-    li.className = "flex flex-row items-center gap-2 py-1 rounded-lg hover:bg-primary active:bg-primary cursor-pointer w-full";
+    li.className = "flex flex-row items-center gap-2 py-1 pl-1 rounded-lg hover:bg-primary active:bg-primary cursor-pointer w-full";
     li.innerHTML = /*html*/ `
-        <span class="text-lg">${option.icon}</span>
+        <span class="text-lg"><img src="${option.icon}" alt="${option.title} icon" class="w-6 h-6"/></span>
         <span class="capitalize text-sm">${String(option.title).replace("-", " ")}</span>
     `;
     li.addEventListener("click", () => {
