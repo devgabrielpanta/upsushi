@@ -41,53 +41,58 @@ for (const option of menuOptions) {
 
 const heroContent = /*html*/ `
     <div
-    class="flex flex-col justify-start items-center w-full h-full gap-4"
+    class="flex flex-col justify-center items-center lg:grid lg:grid-cols-2 w-full h-full gap-4"
     >
-        <div class="w-full h-auto">
-            <img class="object-cover" src="assets/images/background-image.webp" alt="Background Image" />
-        </div>
-        <div class="flex flex-col items-center text-center">
-            <p class="mb-5">
-            (home) Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-            et a id nisi.
-            </p>
-            <button class="btn btn-primary">Ver Entradas</button>
+        
+        <picture class="w-full h-auto">
+            <!-- Desktop -->
+            <source
+            srcset="assets/images/hero-desktop.jpg"
+            media="(min-width: 768px)"
+            />
+
+            <!-- Mobile (fallback / default) -->
+            <img
+            src="assets/images/hero.jpg"
+            alt="Background Image"
+            class="w-full h-auto object-cover"
+            loading="eager"
+            />
+        </picture>
+
+
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+            UPSUSHI é o destino ideal em Lisboa para quem procura sushi fresco, bem preparado e cheio de sabor. Uma ementa cuidada, ingredientes selecionados e uma experiência japonesa autêntica, pensada para desfrutar sem pressa.
+            <button class="btn btn-primary mt-10">Reservar Mesa</button>
         </div>
     </div>
 `;
 
 const aboutContent = /*html*/ `
     <div
-    class="flex flex-col justify-start items-center w-full h-full gap-4"
+    class="flex flex-col justify-center items-center lg:grid lg:grid-cols-2 w-full h-full gap-4"
     >
-        <div class="w-full h-auto">
-            <img class="object-cover" src="assets/images/background-image.webp" alt="Background Image" />
-        </div>
-        <div class="flex flex-col items-center text-center">
-            <p class="mb-5">
-            (about) Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-            et a id nisi.
-            </p>
-            <button class="btn btn-primary">Reservar Mesa</button>
-        </div>
-    </div>
-`;
+        <picture class="w-full h-auto">
+            <!-- Desktop -->
+            <source
+            srcset="assets/images/about-desktop.png"
+            media="(min-width: 768px)"
+            />
 
-const contactsContent = /*html*/ `
-    <div
-    class="flex flex-col justify-start items-center w-full h-full gap-4"
-    >
-        <div class="w-full h-auto">
-            <img class="object-cover" src="assets/images/background-image.webp" alt="Background Image" />
-        </div>
-        <div class="flex flex-col items-center text-center">
-            <p class="mb-5">
-            (contacts) Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-            excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-            et a id nisi.
-            </p>
+            <!-- Mobile (fallback / default) -->
+            <img
+            src="assets/images/about.jpg"
+            alt="Background Image"
+            class="w-full h-auto object-cover"
+            loading="eager"
+            />
+        </picture>
+        <div class="flex flex-col items-center text-center lg:items-start lg:text-left">
+            <div class="flex flex-col justify-start items-center gap-2 mb-5">    
+                <p>No UPSUSHI, unimos tradição e inovação para oferecer uma experiência japonesa autêntica e acessível.</p>
+                <p>Trabalhamos com ingredientes frescos e selecionados, preparando cada prato com cuidado, respeito e atenção aos detalhes.</p>
+                <p>Mais do que sushi, queremos proporcionar momentos de prazer à mesa, num ambiente acolhedor onde a qualidade e o sabor estão sempre em primeiro lugar.</p>
+            </div>
             <button class="btn btn-primary">Reservar Mesa</button>
         </div>
     </div>
@@ -95,10 +100,8 @@ const contactsContent = /*html*/ `
 
 const navHome = document.getElementById("nav-home");
 const navAboutUs = document.getElementById("nav-sobre-nós");
-const navContacts = document.getElementById("nav-contactos");
 navHome.addEventListener("click", () => handleRouteChange("home"));
 navAboutUs.addEventListener("click", () => handleRouteChange("sobre-nós"));
-navContacts.addEventListener("click", () => handleRouteChange("contactos"));
 
 // Carrega a página inicial por defeito
 handleRouteChange("home");
@@ -118,24 +121,22 @@ function handleRouteChange(routeTitle) {
         activeOption.classList.add("bg-primary", "text-neutral", "font-semibold");
     }
 
-    const appContents = ["home", "sobre-nós", "contactos"];
-
     mainContent.innerHTML = "";
-    if(!appContents.includes(routeTitle)) {
+    if(routeTitle != "home" && routeTitle != "sobre-nós") {
         mainContent.appendChild(generateProductList(routeTitle));
-    } else {
-        switch (routeTitle) {
-            case "home":
-                mainContent.innerHTML = heroContent;
-                break;
-            case "sobre-nós":
-                mainContent.innerHTML = aboutContent;
-                break;
-            case "contactos":
-                mainContent.innerHTML = contactsContent;
-                break;
-        }
+        return;
     }
+
+    mainContent.innerHTML = routeTitle === "home"
+        ? heroContent
+        : aboutContent;
+
+    const bookingButtons = mainContent.querySelectorAll("button");
+    bookingButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            bookingModal.showModal();
+        });
+    });
 }
 
 // ###################################################################
