@@ -1,5 +1,10 @@
 # 🍣 UPSUSHI - Site Moderno para Restaurante Japonês
 
+## Links Úteis
+* [Repositório.](https://github.com/devgabrielpanta/upsushi)
+* [Live Demo](https://devgabrielpanta.github.io/upsushi/)
+
+
 ## Créditos
 
 ### Autores
